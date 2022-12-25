@@ -3,7 +3,7 @@ import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
 
-function List() {
+const List = () => {
   return (
     <div>
         영화 리스트
