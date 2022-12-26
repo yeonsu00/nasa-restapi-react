@@ -4,30 +4,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
 import Search from './component/Search';
 import List from './component/List';
+import axios from 'axios';
+import { useEffect } from 'react';
 
-function App() {
+const App = () => {
+  
+  const getData = async () => {
+    try {
+      //응답 성공
+      const response = await axios.get('https://images-api.nasa.gov/search?q=seoul');
+      console.log(response);
+    } catch (error) {
+      //응답 실패
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getData()
+  }, []);
+
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
-    <HashRouter>
-      <Search />
-      <List />
-    </HashRouter>
+    <div className="App">
+      <HashRouter>
+        <Search />
+        <List />
+      </HashRouter>
+    </div>
   );
 }
 
