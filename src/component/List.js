@@ -6,7 +6,7 @@ import { HashRouter, Route } from 'react-router-dom';
 const List = () => {
   return (
     <div>
-        영화 리스트
+        리스트
     </div>
   );
 }

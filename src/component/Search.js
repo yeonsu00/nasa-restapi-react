@@ -12,7 +12,7 @@ const Search = () => {
 
     return (
         <div>
-            <input type="text" value={search} onChange={onChange} placeholder="영화 제목을 입력해 주세요" />
+            <input type="text" value={search} onChange={onChange} placeholder="" />
         </div>
         // <div class="input-group mb-3">
         //     <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
