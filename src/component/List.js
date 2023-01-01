@@ -3,12 +3,16 @@ import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
 
-const List = () => {
+export default (props) => {
   return (
     <div>
-        리스트
+      리스트
+      {/* <ul>
+        {test.map(test => (
+          <li key={test.href}></li>
+        ))}
+      </ul> */}
+      {props.dataArray}
     </div>
   );
 }
-
-export default List;

@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [nasaId, setNasaId] = useState([]);
-  const [dataArray, setDataArray] = useState([]);
+  const [dataArray, setDataArray] = useState(["ss"]); //받아온 api 데이터 저장
 
   const getData = async () => {
     try {
@@ -17,7 +17,12 @@ const App = () => {
       const response = await axios.get('https://images-api.nasa.gov/search?q=seoul');
       console.log(response);
       console.log(response.data.collection.items);
-      setDataArray([...dataArray, ...response.data.collection.items]);
+      // setDataArray([...dataArray, ...response.data.collection.items]);  //배열 합치기
+
+      const test = [...dataArray, ...response.data.collection.items];
+      console.log(test);
+
+      setDataArray(["ssssss"]);
       console.log(dataArray);
     } catch (error) {
       //응답 실패
@@ -31,10 +36,9 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <p>{dataArray}</p> */}
       <HashRouter>
         <Search />
-        <List />
+        <List dataArray={dataArray} />
       </HashRouter>
     </div>
   );
