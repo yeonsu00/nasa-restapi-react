@@ -13,6 +13,7 @@ const App = () => {
   const getData = async () => {
     try {
       //응답 성공
+      setDataArray([]);
       const response = await axios.get('https://images-api.nasa.gov/search?q=seoul');
       console.log(response);
       console.log(response.data.collection.items);
