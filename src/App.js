@@ -18,11 +18,10 @@ const App = () => {
       console.log(response);
       console.log(response.data.collection.items);
       // setDataArray([...dataArray, ...response.data.collection.items]);  //배열 합치기
-
       // const test = [...dataArray, ...response.data.collection.items];
       // console.log(test);
-
       // setDataArray(...test);
+
       setDataArray(dataArray.concat(response.data.collection.items));
       console.log(dataArray);
       
