@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [dataArray, setDataArray] = useState([]); //받아온 api 데이터 저장
+  const [search, setSearch] = useState("");
 
   const getData = async () => {
     try {
@@ -32,8 +33,8 @@ const App = () => {
   return (
     <div className="App">
       <HashRouter>
-        <Search />
-        <List dataArray={dataArray} />
+        <Search search={search} setSearch={setSearch} />
+        <List search={search} dataArray={dataArray} />
       </HashRouter>
     </div>
   );

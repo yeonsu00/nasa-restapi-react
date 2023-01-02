@@ -6,8 +6,14 @@ import { useEffect } from 'react';
 
 export default (props) => {
 
+  const filterTitle = props.dataArray.filter((data) => {
+    return data.data[0].title.replace(" ", "").toLocaleLowerCase().includes(props.search.toLocaleLowerCase().replace(" ", ""))
+  })
+  
   return (
     <div>
+      입력 : {props.search}
+      {filterTitle.map(d => <div><span>{d.data[0].title}</span></div>)}
       <ul>
         {props.dataArray.map(data => (
           <div key={data.data[0].nasa_id}>

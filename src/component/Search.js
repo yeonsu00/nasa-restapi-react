@@ -4,12 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
 import { useState } from 'react';
 
-const Search = () => {
-    const [search, setSearch] = useState("");
+export default (props) => {
 
     const onChange = (e) => {
-        setSearch(e.target.value)
-        
+        props.setSearch(e.target.value)
     }
 
     return (
@@ -22,11 +20,10 @@ const Search = () => {
                     <li><a className="dropdown-item" href="#">Something else here</a></li>
                     <li><a className="dropdown-item" href="#">Separated link</a></li>
                 </ul>
-                <input type="text" className="form-control" aria-label="Text input with dropdown button" value={search} onChange={onChange} />
+                <input type="text" className="form-control" aria-label="Text input with dropdown button" value={props.search} onChange={onChange} />
                 {/* <button className="btn btn-outline-secondary" type="button">검색</button> */}
             </div>
         </div>
     );
 }
 
-export default Search;
