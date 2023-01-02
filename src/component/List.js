@@ -10,7 +10,7 @@ export default (props) => {
     <div>
       <ul>
         {props.dataArray.map(data => (
-          <div>
+          <div key={data.data[0].nasa_id}>
             <img src={data.links[0].href}></img>
             <p>center : {data.data[0].center}</p>
             <p>date_created : {data.data[0].date_created}</p>
