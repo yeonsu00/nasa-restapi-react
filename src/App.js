@@ -17,14 +17,8 @@ const App = () => {
       const response = await axios.get('https://images-api.nasa.gov/search?q=seoul');
       console.log(response);
       console.log(response.data.collection.items);
-      // setDataArray([...dataArray, ...response.data.collection.items]);  //배열 합치기
-      // const test = [...dataArray, ...response.data.collection.items];
-      // console.log(test);
-      // setDataArray(...test);
-
       setDataArray(dataArray.concat(response.data.collection.items));
       console.log(dataArray);
-      
     } catch (error) {
       //응답 실패
       console.error(error);

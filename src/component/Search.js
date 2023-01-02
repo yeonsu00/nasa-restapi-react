@@ -11,7 +11,7 @@ const Search = () => {
     }
 
     return (
-        <div>
+        <div className="App">
             <div className="input-group m-3">
                 <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">선택</button>
                 <ul className="dropdown-menu">

@@ -11,7 +11,14 @@ export default (props) => {
       리스트
       <ul>
         {props.dataArray.map(data => (
-          <img src={data.links[0].href}></img>
+          <div>
+            <img src={data.links[0].href}></img>
+            <p>center : {data.data[0].center}</p>
+            <p>date_created : {data.data[0].date_created}</p>
+            <p>description : {data.data[0].description}</p>
+            <p>nasa_id : {data.data[0].nasa_id}</p>
+            <p>title : {data.data[0].title}</p>
+          </div>
         ))}
       </ul>
     </div>
