@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 const App = () => {
   const [nasaId, setNasaId] = useState([]);
-  const [dataArray, setDataArray] = useState(["ss"]); //받아온 api 데이터 저장
+  const [dataArray, setDataArray] = useState([]); //받아온 api 데이터 저장
 
   const getData = async () => {
     try {
@@ -19,11 +19,13 @@ const App = () => {
       console.log(response.data.collection.items);
       // setDataArray([...dataArray, ...response.data.collection.items]);  //배열 합치기
 
-      const test = [...dataArray, ...response.data.collection.items];
-      console.log(test);
+      // const test = [...dataArray, ...response.data.collection.items];
+      // console.log(test);
 
-      setDataArray(["ssssss"]);
+      // setDataArray(...test);
+      setDataArray(dataArray.concat(response.data.collection.items));
       console.log(dataArray);
+      
     } catch (error) {
       //응답 실패
       console.error(error);

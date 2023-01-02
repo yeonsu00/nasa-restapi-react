@@ -12,7 +12,8 @@ export default (props) => {
           <li key={test.href}></li>
         ))}
       </ul> */}
-      {props.dataArray}
+      {/* {props.dataArray} */}
+
     </div>
   );
 }
