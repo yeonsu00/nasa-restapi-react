@@ -8,7 +8,6 @@ export default (props) => {
 
   return (
     <div>
-      리스트
       <ul>
         {props.dataArray.map(data => (
           <div>

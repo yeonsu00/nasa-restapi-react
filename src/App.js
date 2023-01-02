@@ -8,7 +8,6 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 const App = () => {
-  const [nasaId, setNasaId] = useState([]);
   const [dataArray, setDataArray] = useState([]); //받아온 api 데이터 저장
 
   const getData = async () => {

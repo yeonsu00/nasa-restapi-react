@@ -21,7 +21,7 @@ const Search = () => {
                     <li><a className="dropdown-item" href="#">Separated link</a></li>
                 </ul>
                 <input type="text" className="form-control" aria-label="Text input with dropdown button" value={search} />
-                <button className="btn btn-outline-secondary" type="button">검색</button>
+                {/* <button className="btn btn-outline-secondary" type="button">검색</button> */}
             </div>
         </div>
     );
