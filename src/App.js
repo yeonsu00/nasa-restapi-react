@@ -27,7 +27,7 @@ const App = () => {
   }
 
   useEffect(() => {
-    getData()
+    getData();
   }, []);
 
   return (
