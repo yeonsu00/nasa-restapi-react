@@ -9,7 +9,7 @@ export default (props) => {
     const onChange = (e) => {
         props.setSearch(e.target.value)
     }
-
+    
     return (
         <div className="App">
             <div className="input-group m-3">

@@ -15,7 +15,7 @@ export default (props) => {
       입력 : {props.search}
       {filterTitle.map(d => <div><span>{d.data[0].title}</span></div>)}
       <ul>
-        {props.dataArray.map(data => (
+        {filterTitle.map(data => (
           // <div key={data.data[0].nasa_id}>
           //   <img src={data.links[0].href}></img>
           //   <p>center : {data.data[0].center}</p>
