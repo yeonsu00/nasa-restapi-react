@@ -12,7 +12,7 @@ export default (props) => {
     
     return (
         <div className="App">
-            <div className="input-group m-3">
+            <div className="input-group m-3 w-25">
                 <button className="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="true">선택</button>
                 <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="#">Action</a></li>

@@ -15,7 +15,7 @@ const App = () => {
     try {
       //응답 성공
       setDataArray([]);
-      const response = await axios.get('https://images-api.nasa.gov/search?q=seoul');
+      const response = await axios.get('https://images-api.nasa.gov/search?q=usa');
       console.log(response);
       console.log(response.data.collection.items);
       setDataArray(dataArray.concat(response.data.collection.items));

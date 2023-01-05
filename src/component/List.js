@@ -12,9 +12,13 @@ export default (props) => {
 
   return (
     <div>
-      입력 : {props.search}
-      {filterTitle.map(d => <div><span>{d.data[0].title}</span></div>)}
-      <ul>
+      {/* 입력 : {props.search}
+      {filterTitle.map(d => <div><span>{d.data[0].title}</span></div>)} */}
+      <ul style={{
+        display: "grid",
+        gridTemplateRows: "1fr ",
+        gridTemplateColumns: "1fr 1fr 1fr 1fr",
+      }}>
         {filterTitle.map(data => (
           // <div key={data.data[0].nasa_id}>
           //   <img src={data.links[0].href}></img>
@@ -24,14 +28,15 @@ export default (props) => {
           //   <p>nasa_id : {data.data[0].nasa_id}</p>
           //   <p>title : {data.data[0].title}</p>
           // </div>
-          <div className="card m-3" style={{width: '18rem'}} key={data.data[0].nasa_id}>
-          <img src={data.links[0].href} className="card-img-top" ></img>
+
+          <div className="card m-3" style={{ width: '18rem' }} key={data.data[0].nasa_id}>
+            <img src={data.links[0].href} className="card-img-top" ></img>
             <div className="card-body">
               <h5 className="card-title">{data.data[0].title}</h5>
               <p className="card-text">{data.data[0].date_created}</p>
               <a href="#" className="btn btn-primary">자세히 보기</a>
             </div>
-        </div>
+          </div>
         ))}
       </ul>
     </div>
