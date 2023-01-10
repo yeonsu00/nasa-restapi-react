@@ -28,7 +28,6 @@ export default (props) => {
           //   <p>nasa_id : {data.data[0].nasa_id}</p>
           //   <p>title : {data.data[0].title}</p>
           // </div>
-
           <div className="card m-3" style={{ width: '18rem' }} key={data.data[0].nasa_id}>
             <img src={data.links[0].href} className="card-img-top" ></img>
             <div className="card-body">
