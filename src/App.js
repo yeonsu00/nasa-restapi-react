@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
 import Search from './component/Search';
 import List from './component/List';
+import Test from './component/Test';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
@@ -15,7 +16,7 @@ const App = () => {
     try {
       //응답 성공
       setDataArray([]);
-      const response = await axios.get('https://images-api.nasa.gov/search?q=usa');
+      const response = await axios.get('https://images-api.nasa.gov/search?q=seoul'); //usa
       console.log(response);
       console.log(response.data.collection.items);
       setDataArray(dataArray.concat(response.data.collection.items));
@@ -36,6 +37,7 @@ const App = () => {
         <Search search={search} setSearch={setSearch} />
         <List search={search} dataArray={dataArray} />
       </HashRouter>
+      <Test/>
     </div>
   );
 }

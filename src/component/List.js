@@ -2,13 +2,13 @@ import logo from '../logo.svg';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { HashRouter, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default (props) => {
-
   const filterTitle = props.dataArray.filter((data) => {
     return data.data[0].title.replace(" ", "").toLocaleLowerCase().includes(props.search.toLocaleLowerCase().replace(" ", ""))
   })
+
 
   return (
     <div>
