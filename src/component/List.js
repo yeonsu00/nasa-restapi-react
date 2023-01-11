@@ -5,10 +5,10 @@ import { HashRouter, Route } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 
 export default (props) => {
+
   const filterTitle = props.dataArray.filter((data) => {
     return data.data[0].title.replace(" ", "").toLocaleLowerCase().includes(props.search.toLocaleLowerCase().replace(" ", ""))
   })
-
 
   return (
     <div>

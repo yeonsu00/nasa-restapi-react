@@ -35,9 +35,9 @@ const App = () => {
     <div className="App">
       <HashRouter>
         <Search search={search} setSearch={setSearch} />
+        {/* <Test dataArray={dataArray}/> */}
         <List search={search} dataArray={dataArray} />
       </HashRouter>
-      <Test/>
     </div>
   );
 }
